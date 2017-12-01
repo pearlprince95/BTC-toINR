@@ -13,8 +13,8 @@
 #include <ESP8266mDNS.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
-char ssid[] = "pearlprince95";     // your network SSID (name)
-char password[] = "MAHARANI"; // your network key
+char ssid[] = "XXXXXXX";     // your network SSID (name)
+char password[] = "YYYYYYY"; // your network key
 SSD1306 display(0x3c, D1, D2);
 unsigned long previousMillis = 0;
 const long interval = 40000;
@@ -57,8 +57,8 @@ void loop()
   
  HTTPClient http;  //Declare an object of class HTTPClient
  Serial.println("payload");
-   // http.begin("http://apilayer.net/api/live?access_key=58cdbc49e16a52138264305fc87dd265&currencies=INR&source=USD"); 
-     http.begin("http://api.coindesk.com/v1/bpi/currentprice/inr");
+   
+     http.begin("PASTE YOUR API");//PASTE YOUR API FROM COINDESK
     Serial.println("payload_1");
     int httpCode = http.GET();                                                      
     if (httpCode > 0) 
